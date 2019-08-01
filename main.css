@@ -21,7 +21,10 @@ body {
 
 ul {
     list-style-type: none;
+}
 
+.list {
+    font-size: 50px;
 }
 
 button {
