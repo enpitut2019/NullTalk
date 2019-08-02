@@ -16,7 +16,9 @@
 
 <body>
   <h1 style="font-size: 80px ">ぬるトークへようこそ</h1>
-  <input type="submit" name="add_list" value="趣味を追加">
+  <form action="addList.php" method="post">
+    <input type="submit" name="add_list" value="趣味を追加">
+  </form>
   <?php
     $url = parse_url(getenv("DATABASE_URL"));
     $con = pg_connect("host=" . $url['host'] . " port=" 
