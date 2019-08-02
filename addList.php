@@ -27,6 +27,7 @@
 
     if (isset($_POST["add_list"])) {
         $res = pg_query($con, "INSERT INTO hobbies VALUES(1, 'ゲーム')") or die("クエリ実行エラーです" . pg_last_error());
+        print($res)
     }
 ?>
 
