@@ -18,7 +18,7 @@
   <h1 style="font-size: 80px ">趣味を追加しました</h1>
 
   <a href="myList.php">確認</a><br />
-  <a href="index.php">戻る</a><br />
+  <a href="index.html">戻る</a><br />
   <?php
     $url = parse_url(getenv("DATABASE_URL"));
     $con = pg_connect("host=" . $url['host'] . " port=" 
