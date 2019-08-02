@@ -3,7 +3,7 @@
  $con = pg_connect("host=" . $url['host'] . " port=" 
   . $url['port'] . " dbname=" . substr($url['path'], 1)
   . " user=" . $url['user'] . " password=" . $url['pass']);
- $res = pg_query($con, "select * from hoge") or die("not work" . pg_last_error());
+ $res = pg_query($con, "select * from users") or die("not work" . pg_last_error());
  while($row = pg_fetch_row($res)){
    // hogehoge
  }
