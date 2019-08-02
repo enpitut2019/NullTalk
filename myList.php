@@ -26,6 +26,7 @@
         <li><a style="font-size: 80px ">戦車</a></li>
 
     </ul>
+    <a href="index.html">戻る</a>
   </div>
 </body>
 
