@@ -15,20 +15,20 @@
 </head>
 
 <body>
-  <h1 style="font-size: 80px ">ぬるトークへようこそ</h1>
-  <form action="addList.php" method="post">
-    <input type="submit" name="add_list" value="趣味を追加">
+  <h1 style="font-size: 80px ">追加する趣味を選んでください</h1>
+  <form action="addListResult.php" method="post">
+    <div class="addHobbyList">
+      <label><input type="checkbox" name="hobbyAdd" value="料理">料理</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd" value="料理2">料理2</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd" value="料理3">料理3</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd" value="料理4">料理4</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd" value="料理5">料理5</input><br /></label>
+    </div>
+    <input class="addButton" type="submit" name="addList" value="追加">
   </form>
-  <?php
-    $url = parse_url(getenv("DATABASE_URL"));
-    $con = pg_connect("host=" . $url['host'] . " port=" 
-     . $url['port'] . " dbname=" . substr($url['path'], 1)
-     . " user=" . $url['user'] . " password=" . $url['pass']);
-    if (isset($_POST["add_list"])) {
-        $res = pg_query($con, "INSERT INTO hobbies VALUES(1, 'ゲーム')") or die("クエリ実行エラーです" . pg_last_error());
-        print($res);
-    }
-  ?>
+
+
+
 </body>
 
 </html>
