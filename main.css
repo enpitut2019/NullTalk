@@ -5,6 +5,7 @@ body {
     /* ページ全体のpadding */
     text-align: center;
     /* 下記のautoに未対応用のセンタリング */
+    font-size: 60px;
   }
 
   #main {
@@ -20,5 +21,14 @@ body {
 
 ul {
     list-style-type: none;
+}
 
+.list {
+    font-size: 50px;
+}
+
+button {
+    width: 400px;
+    height: 160px;
+    font-size: 50px;
 }
