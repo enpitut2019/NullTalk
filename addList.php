@@ -18,16 +18,16 @@
   <h1 style="font-size: 80px ">追加する趣味を選んでください</h1>
   <form action="addListResult.php" method="post">
     <div class="addHobbyList">
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理">ゴルフ</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理2">アニメ</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理3">刀</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理4">フィギュア</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理5">ランニング</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理6">野球</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理7">VTuber</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理8">レンズ</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理9">ラーメン</input><br /></label>
-      <label><input type="checkbox" name="hobbyAdd[]" value="料理9">音MAD</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="ゴルフ">ゴルフ</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="アニメ">アニメ</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="刀">刀</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="フィギュア">フィギュア</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="ランニング">ランニング</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="野球">野球</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="VTuber">VTuber</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="レンズ">レンズ</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="ラーメン">ラーメン</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="音MAD">音MAD</input><br /></label>
     </div>
     <input class="addButton" type="submit" name="addList" value="追加">
   </form>
