@@ -28,8 +28,8 @@
     <ul>
     <?php
     $res = pg_query($con, "SELECT hobby FROM hobbies WHERE uid=1") or die("クエリ実行エラーです" . pg_last_error());
-    print_r($res[0]);
-    foreach($res as $hobby) {
+    print_r($res);
+    while($hobby = pg_fetch_row($res)) {
         echo '<li><a style="font-size: 80px ">';
         echo $hobby;
         echo '</a></li>';
