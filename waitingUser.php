@@ -6,7 +6,7 @@ $con = pg_connect("host=" . $url['host'] . " port="
 
 $password = $_POST["password"];
 $res = pg_query($con, "SELECT COUNT(*) FROM rooms WHERE password = '".$password."'") or die("クエリ実行エラーです" . pg_last_error());
-$cnt = pg_fetch_row($res);
+$cnt = 3;#pg_fetch_row($res);
 echo $cnt;
 echo $password;
 // 文字コード設定
