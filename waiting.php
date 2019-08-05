@@ -1,6 +1,18 @@
 <?php
-// セッション開始！
-$flg = session_start();
+    // セッション開始！
+    $check = session_start();
+
+    if(!isset($check)){
+        print("セッションの確立に失敗しました");
+      }
+      $session_id = session_id();
+      $url = parse_url(getenv("DATABASE_URL"));
+      $con = pg_connect("host=" . $url['host'] . " port=" 
+      . $url['port'] . " dbname=" . substr($url['path'], 1)
+      . " user=" . $url['user'] . " password=" . $url['pass']);
+    
+      $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
+            
 ?>
 
 <!DOCTYPE html>

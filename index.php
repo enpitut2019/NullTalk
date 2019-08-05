@@ -32,7 +32,7 @@
   <h1 style="font-size: 80px ">ぬるトークへようこそ</h1>
   <button type="button" onclick="location.href='addList.php'" name="list">あなたの趣味を追加</button><br />
   <button type="button" onclick="location.href='myList.php'" name="list">あなたの趣味を確認</button><br />
-  <button type="button" onclick="location.href='matching.html'" name="matching">友達と同じ趣味を探す</button><br />
+  <button type="button" onclick="location.href='matching.php'" name="matching">友達と同じ趣味を探す</button><br />
 </body>
 
 </html>
