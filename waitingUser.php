@@ -12,7 +12,7 @@ echo $password;
 // 文字コード設定
 header('Content-Type: text/html; charset=UTF-8');
 if($cnt>=2) {
-    $arr["val"] = "success";
+    $arr["val"] = "successd";
 } else {
     $arr["val"] = "failure";
 }
