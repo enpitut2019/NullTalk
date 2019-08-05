@@ -1,3 +1,9 @@
+<?php
+  $check = session_start();
+  if(isset($check)){
+    print("セッションの確立に失敗しました");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
