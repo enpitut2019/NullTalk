@@ -58,6 +58,7 @@
                 }
 
             }).done(function(data) {
+                console.log(data['val']);
                 if(data['val'] == 'success'){
                     window.location.href = 'result.html';
                 }
