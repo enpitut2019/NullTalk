@@ -12,8 +12,12 @@
       . " user=" . $url['user'] . " password=" . $url['pass']);
     
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
-      print_r($res)
-      #print_r($_POST["password"])
+      $uid = pg_fetch_row($res);
+      $password = $_POST["password"];
+
+      $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid.")");
+
+
 
 ?>
 
