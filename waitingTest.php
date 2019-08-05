@@ -52,6 +52,7 @@ $flg = session_start();
     dataType : "json",
   }).done(function(data) {
     console.log(data);
+    window.location.href = "result.html";
   }).fail(function(jqXHR, textStatus) {
     console.log(data);
     });
