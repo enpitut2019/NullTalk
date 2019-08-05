@@ -1,6 +1,6 @@
 <?php
   $check = session_start();
-  if(isset($check)){
+  if(!isset($check)){
     print("セッションの確立に失敗しました");
   }
   $session_id = session_id();
@@ -10,7 +10,7 @@
   . " user=" . $url['user'] . " password=" . $url['pass']);
 
   $res = pg_query($con, "INSERT INTO users VALUES(".$session_id.")") or die("クエリ実行エラーです" . pg_last_error());
-          
+        
 ?>
 <!DOCTYPE html>
 <html lang="en">
