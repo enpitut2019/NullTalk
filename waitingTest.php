@@ -38,9 +38,11 @@ $flg = session_start();
     ?>
     <script>
         $(function() {
-  var POLLLING_INVERVAL_TIME_IN_MILLIS = 10000;//1s
+        var POLLLING_INVERVAL_TIME_IN_MILLIS = 10000;//1s
+         window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
+
   (function polling() {
-    window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
+    //window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
     getCountUp();
   }());
 
