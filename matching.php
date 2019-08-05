@@ -25,7 +25,7 @@
     <p>合言葉を入力してください</p>
     <form action="waiting.php" method="post">
         <input type="text" name="password" size="30" maxlength="4">
-        <input class="addButton" type="submit" name="addList" value="GO!">
+        <input class="addButton" type="submit" name="matching" value="GO!">
     </form>
 </body>
 

@@ -12,7 +12,8 @@
       . " user=" . $url['user'] . " password=" . $url['pass']);
     
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
-            
+      
+      print_r($_POST["password"])
 ?>
 
 <!DOCTYPE html>
@@ -37,27 +38,27 @@
 <body>
     <h1>test</h1>
     <script>
-        $(function() {
-  var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//1s
-  (function polling() {
-    getCountUp();
-    window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
-  }());
-  function getCountUp() {
-    $.ajax({
-    type : "GET",
-    url : "waitingUser.php",
-    content : "application/json",
-    dataType : "json",
-  }).done(function(data) {
-      if(data['val'] == 'success'){
-         window.location.href = 'result.html';
-      }
-  }).fail(function(jqXHR, textStatus) {
-    console.log(data);
+    $(function() {
+        var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//1s
+        (function polling() {
+            getCountUp();
+            window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
+        }());
+        function getCountUp() {
+            $.ajax({
+                type : "GET",
+                url : "waitingUser.php",
+                content : "application/json",
+                dataType : "json",
+            }).done(function(data) {
+                if(data['val'] == 'success'){
+                    window.location.href = 'result.html';
+                }
+            }).fail(function(jqXHR, textStatus) {
+                console.log(data);
+            });
+        }
     });
-  }
-});
 </script>
 </body>
 
