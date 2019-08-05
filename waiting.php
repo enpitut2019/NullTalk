@@ -57,7 +57,7 @@
                     "uid": <?php $uid?>
                 },
                 success: function(j_data){
-
+                    console.log(j_data);
                 }
 
             }).done(function(data) {
