@@ -9,7 +9,7 @@
   . $url['port'] . " dbname=" . substr($url['path'], 1)
   . " user=" . $url['user'] . " password=" . $url['pass']);
 
-  $res = pg_query($con, "INSERT INTO users VALUES('".$session_id."')") or die("クエリ実行エラーです" . pg_last_error());
+  $res = pg_query($con, "INSERT INTO users(session_id) VALUES('".$session_id."')") or die("クエリ実行エラーです" . pg_last_error());
         
 ?>
 <!DOCTYPE html>
