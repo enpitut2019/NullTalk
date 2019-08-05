@@ -13,7 +13,7 @@
     
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
       $uid = pg_fetch_row($res);
-      $password = $_POST["password"];
+      $password = $_POST["password"][0];
 
       $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid.")") or die("クエリ実行エラーです" . pg_last_error());
 
