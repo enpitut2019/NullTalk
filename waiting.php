@@ -16,9 +16,6 @@
       $password = $_POST["password"];
 
       $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid."')") or die("クエリ実行エラーです" . pg_last_error());
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -51,10 +48,15 @@
         }());
         function getCountUp() {
             $.ajax({
-                type : "GET",
+                type : "POST",
                 url : "waitingUser.php",
                 content : "application/json",
                 dataType : "json",
+                data:{
+                    "password": <?php $password ?>,
+                    "uid": <?php $uid?>
+                }
+
             }).done(function(data) {
                 if(data['val'] == 'success'){
                     window.location.href = 'result.html';
