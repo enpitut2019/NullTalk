@@ -31,7 +31,7 @@
     
     foreach($_POST["hobbyAdd"] as $value){
         if (isset($value)) {
-            $res = pg_query($con, "INSERT INTO hobbies(hobby_name) VALUES('$value')") or die("クエリ実行エラーです" . pg_last_error());
+            $res = pg_query($con, "INSERT INTO hobbies(hobby_name) VALUES('$value')");
             #print($res);
         }
     }
