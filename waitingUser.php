@@ -10,9 +10,9 @@ $cnt = pg_fetch_row($res);
 echo $cnt;
 echo $password;
 // 文字コード設定
-header('Content-Type: text/html; charset=UTF-8');
+#header('Content-Type: text/html; charset=UTF-8');
 if($cnt>=2) {
-    $arr["val"] = "successd";
+    $arr["val"] = "success";
 } else {
     $arr["val"] = "failure";
 }
