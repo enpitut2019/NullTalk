@@ -23,22 +23,10 @@ $flg = session_start();
         
 
 <body>
-    <h1>test</h1>
-    <a href="test2.php">test2</a><br />
-    <?php
-        #$ttt = $_SERVER['HTTP_USER_AGENT']; 
-        #print($ttt);
-
-        if( $flg === true ){
-            // セッションIDを取得
-            echo session_id();
-        } else {
-            echo "セッションの作成に失敗しました！";
-        }   
-    ?>
+    <h1>相手を待っています</h1>
     <script>
         $(function() {
-        var POLLLING_INVERVAL_TIME_IN_MILLIS = 10000;//1s
+        var POLLLING_INVERVAL_TIME_IN_MILLIS = 2000;//1s
         window.setTimeout(polling, POLLLING_INVERVAL_TIME_IN_MILLIS);
   
   function polling() {
