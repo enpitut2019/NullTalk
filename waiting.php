@@ -12,8 +12,9 @@
       . " user=" . $url['user'] . " password=" . $url['pass']);
     
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
-      
-      print_r($_POST["password"])
+      print_r($res)
+      #print_r($_POST["password"])
+
 ?>
 
 <!DOCTYPE html>
