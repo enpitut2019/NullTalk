@@ -55,6 +55,9 @@
                 data:{
                     "password": <?php $password ?>,
                     "uid": <?php $uid?>
+                },
+                success: function()(j_data){
+                    
                 }
 
             }).done(function(data) {
