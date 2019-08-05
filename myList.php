@@ -27,7 +27,7 @@
     <div class="listCenter">
     <ul>
     <?php
-    $res = pg_query($con, "SELECT hobby FROM hobbies WHERE uid=1") or die("クエリ実行エラーです" . pg_last_error());
+    $res = pg_query($con, "SELECT hobby_name FROM hobbies") or die("クエリ実行エラーです" . pg_last_error());
     while($hobby = pg_fetch_row($res)) {
         echo '<li><a style="font-size: 80px ">';
         echo $hobby[0];
