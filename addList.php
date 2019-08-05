@@ -11,6 +11,11 @@
       color: #333333;
       e-height: 1;
     }
+    input {
+
+      text-align: left;
+      padding-left: 100px;
+    }
   </style>
 </head>
 
