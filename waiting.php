@@ -3,7 +3,7 @@
     $check = session_start();
 
     if(!isset($check)){
-        print("セッションの確立に失敗しました");
+        print("セッションの確立に失敗しましたよ");
       }
       $session_id = session_id();
       $url = parse_url(getenv("DATABASE_URL"));
@@ -36,17 +36,6 @@
 
 <body>
     <h1>test</h1>
-    <a href="test2.php">test2</a><br />
-    <?php
-        #$ttt = $_SERVER['HTTP_USER_AGENT']; 
-        #print($ttt);
-        if( $flg === true ){
-            // セッションIDを取得
-            echo session_id();
-        } else {
-            echo "セッションの作成に失敗しました！";
-        }   
-    ?>
     <script>
         $(function() {
   var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//1s
