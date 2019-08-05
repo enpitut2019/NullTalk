@@ -15,7 +15,7 @@
       $uid = pg_fetch_row($res);
       $password = $_POST["password"];
 
-      $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid.")");
+      $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid.")") or die("クエリ実行エラーです" . pg_last_error());
 
 
 
@@ -41,7 +41,7 @@
         
 
 <body>
-    <h1>test</h1>
+    <h1>waiting</h1>
     <script>
     $(function() {
         var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//1s
