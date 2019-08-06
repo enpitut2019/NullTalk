@@ -24,7 +24,7 @@
     </ul>
   </div>
   <div id="main">
-  <h1>追加する趣味を選んでください</h1>
+  <h1>興味のある事柄を選んでください</h1>
   <form action="addListResult.php" method="post">
     <div class="addHobbyList">
       <label><input type="checkbox" name="hobbyAdd[]" value="ゴルフ">ゴルフ</input><br /></label>
