@@ -37,12 +37,14 @@
 
             $res_uid = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
             $uid = pg_fetch_row($res_uid)[0];
+            print('uid '.$uid);
 
             
-            $res_hid = pg_query($con, "SELECT hid FROM hobbies WHERE hobby_name = '".$hobby_name."'") or die("クエリ実行エラーです" . pg_last_error());
+            $res_hid = pg_query($con, "SELECT hid FROM hobbies WHERE hobby_name = '".$hobby_name."'"); # or die("クエリ実行エラーです" . pg_last_error());
             $hid = pg_fetch_row($res_uid)[0];
+            print('hid '.$hid);
 
-            $res_ins = pg_query($con, "INSERT INTO user_hobbies VALUES($uid, $hid)");
+            $res_ins = pg_query($con, "INSERT INTO user_hobbies VALUES($uid, $hid)") or die("クエリ実行エラーです" . pg_last_error());
             #print($res);
         }
     }
