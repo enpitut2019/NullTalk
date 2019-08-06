@@ -33,7 +33,7 @@
         . $url['port'] . " dbname=" . substr($url['path'], 1)
         . " user=" . $url['user'] . " password=" . $url['pass']);
 
-      $password = $_GET["password"];
+      $password = $_POST["password"];
 
       if (isset($password)) {
         $res = pg_query($con, "SELECT uid FROM rooms WHERE password='".$password."'");
