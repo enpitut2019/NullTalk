@@ -122,7 +122,7 @@
           content : "application/json",
           dataType : "json",
           data:{
-            "password": <?php echo $password ?>,
+            "password": '<?php echo $password ?>',
             "uid": <?php echo $uid ?>
           }
         }).done(function(data1) {
