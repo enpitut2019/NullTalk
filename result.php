@@ -35,7 +35,7 @@
 
         if (isset($password)) {
             $res = pg_query($con, "SELECT uid FROM rooms WHERE password='".$password."'");
-            $uid = pg_fetch_row($res)[0];
+            $uid = pg_fetch_row($res)[1];
             print($uid);
         }
     ?>
