@@ -46,7 +46,7 @@
     ?>
     
     </ul>
-    <a href="index.html">戻る</a>
+    <a href="index.php">戻る</a>
   </div>
 </body>
 
