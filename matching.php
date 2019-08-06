@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +23,10 @@
 <body>
     <h1>友達を指定します</h1>
     <p>合言葉を入力してください</p>
-    <input type="text" name="name" size="30" maxlength="4">
-    <button type="button" onclick="location.href='result.html'" name="result">GO!</button>
+    <form action="waiting.php" method="post">
+        <input type="text" name="password" size="30" maxlength="4">
+        <input class="addButton" type="submit" name="matching" value="GO!">
+    </form>
 </body>
 
 </html>
