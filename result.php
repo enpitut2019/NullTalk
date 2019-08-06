@@ -44,9 +44,9 @@
           INTERSECT SELECT hid FROM user_hobbies WHERE uid=".$uid2);
         while($hid = pg_fetch_row($res)) {
           $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid[0]); 
-          echo '<a style="font-size: 80px ">';
+          echo '<a style="font-size: 20px ">';
           echo pg_fetch_row($hobby_name)[0];
-          echo '</a>ß';
+          echo '</a><br>';
         }
       }
     ?>
