@@ -24,13 +24,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ぬるトーク</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <style type='text/css'>
-    body {
-      background-color: #ddd;
-      color: #333333;
-      e-height: 1;
-    }
-  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
