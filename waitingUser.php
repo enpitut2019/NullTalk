@@ -7,8 +7,8 @@ $con = pg_connect("host=" . $url['host'] . " port="
 $password = $_GET["password"];
 $res = pg_query($con, "SELECT COUNT(*) FROM rooms WHERE password = '".$password."'");
 $cnt = pg_fetch_row($res)[0];
-echo $cnt;
-echo $password;
+#echo $cnt;
+#echo $password;
 // 文字コード設定
 #header('Content-Type: text/html; charset=UTF-8');
 if($cnt>=2) {
