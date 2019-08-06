@@ -51,8 +51,8 @@
                 content : "application/json",
                 dataType : "json",
                 data:{
-                    "password": <?php $password ?>,
-                    "uid": <?php $uid?>
+                    "password": <?php echo $password ?>,
+                    "uid": <?php echo $uid ?>
                 }
             }).done(function(data) {
                 console.log(data['val']);
