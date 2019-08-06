@@ -54,13 +54,13 @@
                     "password": <?php echo $password ?>,
                     "uid": <?php echo $uid ?>
                 }
-            }).done(function(data) {
-                console.log(data['val']);
-                if(data['val'] == 'success'){
+            }).done(function(data1) {
+                console.log(data1['val']);
+                if(data1['val'] == 'success'){
                     window.location.href = 'result.html';
                 }
             }).fail(function(jqXHR, textStatus) {
-                console.log(data);
+                console.log('failed');
             });
         }
     });
