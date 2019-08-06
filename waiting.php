@@ -34,9 +34,6 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
-
-        
-
 <body>
     <h1>waiting</h1>
     <script>
@@ -55,11 +52,7 @@
                 data:{
                     "password": <?php $password ?>,
                     "uid": <?php $uid?>
-                },
-                success: function(j_data){
-                    console.log(j_data);
                 }
-
             }).done(function(data) {
                 console.log(data['val']);
                 if(data['val'] == 'success'){
