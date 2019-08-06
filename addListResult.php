@@ -29,7 +29,7 @@
   <h1 style="font-size: 80px ">趣味を追加しました</h1>
 
   <a href="myList.php">確認</a><br />
-  <a href="index.html">戻る</a><br />
+  <a href="index.php">戻る</a><br />
   <?php
     
     foreach($_POST["hobbyAdd"] as $hobby_name){
@@ -44,7 +44,7 @@
             $hid = pg_fetch_row($res_uid)[0];
             print('hid '.$hid);
 
-            $res_ins = pg_query($con, "INSERT INTO user_hobbies VALUES($uid, $hid)") or die("クエリ実行エラーです" . pg_last_error());
+            $res_ins = pg_query($con, "INSERT INTO user_hobbies VALUES(".$uid.", ".$hid.")") or die("クエリ実行エラーです" . pg_last_error());
             #print($res);
         }
     }
