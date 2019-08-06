@@ -117,7 +117,7 @@
       }());
       function getCountUp() {
         $.ajax({
-          type : "GET",
+          type : "POST",
           url : "waitingUser.php",
           content : "application/json",
           dataType : "json",
@@ -127,7 +127,10 @@
           }
         }).done(function(data1) {
           if(data1['val'] == 'success'){
-            window.location.href = 'result.php?password=<?php echo $password ?>';
+            //window.location.href = 'result.php';
+            var f = document.forms["to_result"];
+            f.method = "POST";
+            f.submit();
           }
         }).fail(function(jqXHR, textStatus) {
           console.log('failed');
@@ -135,6 +138,10 @@
       }
     });
   </script>
+
+  <form name="to_result" action="result.php" method="post">
+    <input type="hidden" name="password" value= <?php echo $password ?> >
+  </form>
 </body>
 
 </html>
