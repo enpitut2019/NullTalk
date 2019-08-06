@@ -25,6 +25,7 @@
         あなたとxxさんの共通の趣味は<br>こちらです
     </h1>
 
+    <ul>
     <?php
         $url = parse_url(getenv("DATABASE_URL"));
         $con = pg_connect("host=" . $url['host'] . " port=" 
@@ -42,17 +43,15 @@
                     INTERSECT SELECT hid FROM user_hobbies WHERE uid=".$uid2);
             while($hid = pg_fetch_row($res)) {
                 $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid[0]); 
-               #echo '<li><a style="font-size: 80px ">';
+               echo '<li><a style="font-size: 80px ">';
                echo pg_fetch_row($hobby_name)[0];
+               echo '</a></li>';
             }
         }
     ?>
-    <ul>
-        <li><a style="font-size: 80px ">ゴルフ</a></li>
-        <li><a style="font-size: 80px ">アニメ</a></li>
-        <li><a style="font-size: 80px ">刀</a></li>
+    
     </ul>
-    <a href="index.html">戻る</a>
+    <a href="index.php">戻る</a>
 </div>
 </body>
 
