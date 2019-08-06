@@ -22,7 +22,6 @@
   <div id="main">
     <h1>あなたの趣味はこちらです</h1>
     <div class="listCenter">
-      <ul>
         <?php
           $check = session_start();
           if(!isset($check)){
@@ -46,8 +45,6 @@
             echo '</a><br>';
           }
         ?>
-        
-      </ul>
       <a href="index.php">戻る</a>
     </div>
   </div>
