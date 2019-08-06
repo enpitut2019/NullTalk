@@ -14,6 +14,7 @@
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
       $uid = pg_fetch_row($res)[0];
       $password = $_POST["password"];
+      echo $password;
 
       $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid."')"); #or die("クエリ実行エラーです" . pg_last_error());
 ?>
@@ -30,7 +31,7 @@
             background-color: #ddd;
             color: #333333;
             e-height: 1;
-        },
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
