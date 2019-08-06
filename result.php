@@ -5,27 +5,28 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ぬるトーク</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <style type='text/css'>
-    body {
-      background-color: #ddd;
-      color: #333333;
-      e-height: 1;
-    }
-
-    li {
-      font-size: 25px;
-      color: #006;
-      font-weight: bold;
+  <style>
+    #main {
+      width: 100vw;
+      height: auto;
     }
   </style>
 </head>
 
 <body>
+  <div id="header">
+    <h1>NullTalk</h1>
+    <ul id="menu">
+      <li><a href="index.php">ホーム</a></li>
+      <li><a href="myList.php">趣味の閲覧</a></li>
+      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="matching.php">マッチング</a></li>
+    </ul>
+  </div>
+  <div id="main">
   <h1>
     共通の趣味はこちらです
   </h1>
-
-  <ul>
     <?php
       $url = parse_url(getenv("DATABASE_URL"));
       $con = pg_connect("host=" . $url['host'] . " port=" 
@@ -43,15 +44,17 @@
           INTERSECT SELECT hid FROM user_hobbies WHERE uid=".$uid2);
         while($hid = pg_fetch_row($res)) {
           $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid[0]); 
-          echo '<li><a style="font-size: 80px ">';
+          echo '<a style="font-size: 80px ">';
           echo pg_fetch_row($hobby_name)[0];
-          echo '</a></li>';
+          echo '</a>ß';
         }
       }
     ?>
-    
-  </ul>
   <a href="index.php">戻る</a>
+  </div>
+  <div id="footer">
+    <span id="footer_text">Copyright&copy; 2019 ぬるんちゅ All Rights Reserved.</span>
+  </div>
 </body>
 
 </html>
