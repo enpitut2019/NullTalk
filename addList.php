@@ -32,8 +32,11 @@
       <label><input type="checkbox" name="hobbyAdd[]" value="刀">刀</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="フィギュア">フィギュア</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="ランニング">ランニング</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="プログラミング">プログラミング</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="野球">野球</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="VTuber">VTuber</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="enPiT">enPiT</input><br /></label>
+      <label><input type="checkbox" name="hobbyAdd[]" value="お酒">お酒</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="レンズ">レンズ</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="ラーメン">ラーメン</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="音MAD">音MAD</input><br /></label>
