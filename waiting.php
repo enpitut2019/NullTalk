@@ -56,7 +56,7 @@
                 }
             }).done(function(data1) {
                 if(data1['val'] == 'success'){
-                    window.location.href = 'result.html';
+                    window.location.href = 'result.php?password=<?php echo $password ?>';
                 }
             }).fail(function(jqXHR, textStatus) {
                 console.log('failed');
