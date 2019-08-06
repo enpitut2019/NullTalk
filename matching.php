@@ -72,10 +72,10 @@
   <div id="header">
     <h1>NullTalk</h1>
     <ul id="menu">
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="list.php">趣味の閲覧</a></li>
+      <li><a href="index.php">ホーム</a></li>
+      <li><a href="myList.php">趣味の閲覧</a></li>
       <li><a href="addList.php">趣味の追加</a></li>
-      <li><a href="matching.html">マッチング</a></li>
+      <li><a href="matching.php">マッチング</a></li>
     </ul>
   </div>
   <div id="main">
