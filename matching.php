@@ -84,7 +84,7 @@
       <div id="form_wrapper">
         <div class="msr_text_04">
           <div id="form">
-            <div class="form_parts" id="form_input"><input type="text" name="password" maxlength="4" /></div>
+            <div class="form_parts" id="form_input"><input type="text" name="password" maxlength="4" placeholder="入力してください"/></div>
             <div class="form_parts" id="form_button"><input type="submit" name="matching" id="submit_button" value="GO!"></input></div>
           </div>
         </div>
