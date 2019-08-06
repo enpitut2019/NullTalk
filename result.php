@@ -43,8 +43,7 @@
             while($hid = pg_fetch_row($res)) {
                 $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid); 
                #echo '<li><a style="font-size: 80px ">';
-                echo $hobby_name[0];
-                #echo '</a></li>';
+               echo pg_fetch_row($hobby_name)[0];
             }
         }
     ?>
