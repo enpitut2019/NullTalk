@@ -19,6 +19,9 @@
     $con = pg_connect("host=" . $url['host'] . " port=" 
     . $url['port'] . " dbname=" . substr($url['path'], 1)
     . " user=" . $url['user'] . " password=" . $url['pass']);
+
+
+
 ?>
 
 
@@ -29,9 +32,17 @@
   <a href="index.html">戻る</a><br />
   <?php
     
-    foreach($_POST["hobbyAdd"] as $value){
-        if (isset($value)) {
-            $res = pg_query($con, "INSERT INTO hobbies VALUES(1, '$value')") or die("クエリ実行エラーです" . pg_last_error());
+    foreach($_POST["hobbyAdd"] as $hobby_name){
+        if (isset($hobby_name)) {
+
+            $res_uid = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
+            $uid = pg_fetch_row($res_uid)[0];
+
+            
+            $res_hid = pg_query($con, "SELECT hid FROM hobbies WHERE hobby_name = '".$hobby_name."'"); #or die("クエリ実行エラーです" . pg_last_error());
+            $hid = pg_fetch_row($res_uid)[0];
+
+            $res_ins = pg_query($con, "INSERT INTO user_hobbies VALUES($uid, $hid)");
             #print($res);
         }
     }
