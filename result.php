@@ -24,6 +24,21 @@
     <h1>
         あなたとxxさんの共通の趣味は<br>こちらです
     </h1>
+
+    <?php
+        $url = parse_url(getenv("DATABASE_URL"));
+        $con = pg_connect("host=" . $url['host'] . " port=" 
+        . $url['port'] . " dbname=" . substr($url['path'], 1)
+        . " user=" . $url['user'] . " password=" . $url['pass']);
+
+        $password = $_GET["password"];
+
+        if (isset($password)) {
+            $res = pg_query($con, "SELECT uid FROM rooms WHERE password='".$password."'");
+            $uid = pg_fetch_row($res)[0];
+            print($uid);
+        }
+    ?>
     <ul>
         <li><a style="font-size: 80px ">ゴルフ</a></li>
         <li><a style="font-size: 80px ">アニメ</a></li>
