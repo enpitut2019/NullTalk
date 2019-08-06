@@ -41,9 +41,9 @@
           $res_hids = pg_query($con, "SELECT hid FROM user_hobbies WHERE uid = '".$uid."'"); # or die("クエリ実行エラーです" . pg_last_error());
           while($hid = pg_fetch_row($res_hids)) {
             $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid[0]); 
-            echo '<li><a style="font-size: 80px ">';
+            echo '<a style="font-size: 80px ">';
             echo pg_fetch_row($hobby_name)[0];
-            echo '</a></li>';
+            echo '</a><br>';
           }
         ?>
         
