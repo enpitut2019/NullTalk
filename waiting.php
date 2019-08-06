@@ -15,7 +15,7 @@
       $uid = pg_fetch_row($res)[0];
       $password = $_POST["password"];
 
-      $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid."')") or die("クエリ実行エラーです" . pg_last_error());
+      $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid."')"); #or die("クエリ実行エラーです" . pg_last_error());
 ?>
 
 <!DOCTYPE html>
