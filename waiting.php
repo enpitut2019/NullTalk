@@ -35,6 +35,7 @@
 </head>
 <body>
   <h1>相手を待っています...</h1>
+  <img src="gif-load.gif">
   <script>
     $(function() {
       var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//1s
