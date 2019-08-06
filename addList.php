@@ -36,9 +36,6 @@
     </div>
     <input class="addButton" type="submit" name="addList" value="追加">
   </form>
-
-
-
 </body>
 
 </html>
