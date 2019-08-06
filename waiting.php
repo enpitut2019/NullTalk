@@ -48,7 +48,7 @@
         }());
         function getCountUp() {
             $.ajax({
-                type : "POST",
+                type : "GET",
                 url : "waitingUser.php",
                 content : "application/json",
                 dataType : "json",
