@@ -36,7 +36,7 @@
 
       if (isset($password)) {
         $res = pg_query($con, "SELECT uid FROM rooms WHERE password='".$password."' 
-        and current_time - insert_time < interval '1 minute'");
+        and current_timestamp - insert_time < interval '1 minute'");
         $uid1 = pg_fetch_row($res)[0];
         $uid2 = pg_fetch_row($res)[0];
 

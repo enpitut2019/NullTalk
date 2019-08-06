@@ -6,7 +6,7 @@
 
   $password = $_GET["password"];
   $res = pg_query($con, "SELECT COUNT(*) FROM rooms WHERE password = '".$password."' 
-                    and current_time - insert_time < interval '1 minute'");
+                    and current_timestamp - insert_time < interval '1 minute'");
   $cnt = pg_fetch_row($res)[0];
   if($cnt>=2) {
     $arr["val"] = "success";
