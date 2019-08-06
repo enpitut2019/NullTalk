@@ -14,7 +14,7 @@
       $res = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
       $uid = pg_fetch_row($res)[0];
       $password = $_POST["password"];
-      echo $password;
+      #echo $password;
 
       $res = pg_query($con, "INSERT INTO rooms(password, uid) VALUES('".$password."', '".$uid."')"); #or die("クエリ実行エラーです" . pg_last_error());
 ?>
@@ -55,7 +55,6 @@
                     "uid": <?php echo $uid ?>
                 }
             }).done(function(data1) {
-                console.log(data1['val']);
                 if(data1['val'] == 'success'){
                     window.location.href = 'result.html';
                 }
