@@ -40,8 +40,12 @@
 
             $res = pg_query($con, "SELECT hid FROM user_hobbies WHERE uid=".$uid1." 
                     INTERSECT SELECT hid FROM user_hobbies WHERE uid=".$uid2);
-            print(pg_fetch_row($res)[0]);
-
+            while($hid = pg_fetch_row($res)) {
+                $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid); 
+               #echo '<li><a style="font-size: 80px ">';
+                echo $hobby_name[0];
+                #echo '</a></li>';
+            }
         }
     ?>
     <ul>
