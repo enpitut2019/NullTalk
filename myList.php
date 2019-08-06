@@ -14,34 +14,37 @@
     </style>
 </head>
 
-<?php
-    $url = parse_url(getenv("DATABASE_URL"));
-    $con = pg_connect("host=" . $url['host'] . " port=" 
-     . $url['port'] . " dbname=" . substr($url['path'], 1)
-     . " user=" . $url['user'] . " password=" . $url['pass']);
-?>
         
 
 <body>
     <h1>あなたの趣味は<br/>こちらです</h1>
     <div class="listCenter">
     <ul>
+    
     <?php
-    $res = pg_query($con, "SELECT hobby FROM hobbies WHERE uid=1") or die("クエリ実行エラーです" . pg_last_error());
-    while($hobby = pg_fetch_row($res)) {
-        echo '<li><a style="font-size: 80px ">';
-        echo $hobby[0];
-        echo '</a></li>';
-    }
-    ?>
-    <!--
+        $check = session_start();
+        if(!isset($check)){
+        print("セッションの確立に失敗しました");
+        }
+        $session_id = session_id();
 
-        <li><a style="font-size: 80px ">ゴルフ</a></li>
-        <li><a style="font-size: 80px ">アニメ</a></li>
-        <li><a style="font-size: 80px ">刀</a></li>
-        <li><a style="font-size: 80px ">フィギュア</a></li>
-        <li><a style="font-size: 80px ">戦車</a></li>
--->
+        $url = parse_url(getenv("DATABASE_URL"));
+        $con = pg_connect("host=" . $url['host'] . " port=" 
+        . $url['port'] . " dbname=" . substr($url['path'], 1)
+        . " user=" . $url['user'] . " password=" . $url['pass']);
+
+        $res_uid = pg_query($con, "SELECT uid FROM users WHERE session_id = '".$session_id."'"); #or die("クエリ実行エラーです" . pg_last_error());
+        $uid = pg_fetch_row($res_uid)[0];
+
+        $res_hids = pg_query($con, "SELECT hid FROM user_hobbies WHERE uid = '".$uid."'"); # or die("クエリ実行エラーです" . pg_last_error());
+        while($hid = pg_fetch_row($res_hids)) {
+            $hobby_name = pg_query($con, "SELECT hobby_name FROM hobbies WHERE hid=".$hid[0]); 
+            echo '<li><a style="font-size: 80px ">';
+            echo pg_fetch_row($hobby_name)[0];
+            echo '</a></li>';
+        }
+    ?>
+    
     </ul>
     <a href="index.html">戻る</a>
   </div>
