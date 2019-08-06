@@ -6,13 +6,7 @@
   <title>ぬるトーク</title>
   <link rel="stylesheet" type="text/css" href="main.css">
   <style type='text/css'>
-    body {
-      background-color: #ddd;
-      color: #333333;
-      e-height: 1;
-    }
     input {
-
       text-align: left;
       padding-left: 100px;
     }
@@ -20,7 +14,17 @@
 </head>
 
 <body>
-  <h1 style="font-size: 80px ">追加する趣味を選んでください</h1>
+<div id="header">
+    <h1>NullTalk</h1>
+    <ul id="menu">
+      <li><a href="index.php">ホーム</a></li>
+      <li><a href="myList.php">趣味の閲覧</a></li>
+      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="matching.php">マッチング</a></li>
+    </ul>
+  </div>
+  <div id="main">
+  <h1>追加する趣味を選んでください</h1>
   <form action="addListResult.php" method="post">
     <div class="addHobbyList">
       <label><input type="checkbox" name="hobbyAdd[]" value="ゴルフ">ゴルフ</input><br /></label>
@@ -36,6 +40,10 @@
     </div>
     <input class="addButton" type="submit" name="addList" value="追加">
   </form>
+  </div>
+  <div id="footer">
+    <span id="footer_text">Copyright&copy; 2019 ぬるんちゅ All Rights Reserved.</span>
+  </div>
 </body>
 
 </html>

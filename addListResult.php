@@ -6,11 +6,6 @@
   <title>ぬるトーク</title>
   <link rel="stylesheet" type="text/css" href="main.css">
   <style type='text/css'>
-    body {
-      background-color: #ddd;
-      color: #333333;
-      e-height: 1;
-    }
   </style>
 </head>
 
@@ -22,7 +17,17 @@
 ?>
 
 
-<body>
+<body>  
+  <div id="header">
+    <h1>NullTalk</h1>
+    <ul id="menu">
+      <li><a href="index.php">ホーム</a></li>
+      <li><a href="myList.php">趣味の閲覧</a></li>
+      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="matching.php">マッチング</a></li>
+    </ul>
+  </div>
+  <div id="main">
   <h1 style="font-size: 80px ">趣味を追加しました</h1>
 
   <a href="myList.php">確認</a><br />
@@ -45,6 +50,10 @@
       }
     }
   ?>
+  </div>
+  <div id="footer">
+    <span id="footer_text">Copyright&copy; 2019 ぬるんちゅ All Rights Reserved.</span>
+  </div>
 </body>
 
 </html>

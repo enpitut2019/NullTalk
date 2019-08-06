@@ -16,23 +16,75 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <title>ぬるトーク</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <style type='text/css'>
-    body {
-      background-color: #ddd;
-      color: #333333;
-      e-height: 1;
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <style>
+    a {
+      color: white;
+      text-align: center;
+      padding: 14px 0px;
+      text-decoration: none;
+    }
+
+    #how_to_use_div_wrapper {
+      width: 100%;
+      text-align: center;
+    }
+
+    #how_to_use_div {
+      width: 50%;
+      padding-left: 25%;
+      display: block-inline;
+    }
+
+    .how_to_use {
+      padding: 14px 16px;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    #form_input_sample {
+      pointer-events: none;
+      border: 5px solid #000000;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      color: #000000;
+      font-size: 13px;
+      padding: 10px;
+      width: 150px;
     }
   </style>
 </head>
 
 <body>
-  <h1 style="font-size: 80px ">ぬるトークへようこそ</h1>
-  <button type="button" onclick="location.href='addList.php'" name="list">あなたの趣味を追加</button><br />
-  <button type="button" onclick="location.href='myList.php'" name="list">あなたの趣味を確認</button><br />
-  <button type="button" onclick="location.href='matching.php'" name="matching">友達と同じ趣味を探す</button><br />
+  <div id="header">
+    <h1>NullTalk</h1>
+    <ul id="menu">
+      <li><a href="index.php">ホーム</a></li>
+      <li><a href="myList.php">趣味の閲覧</a></li>
+      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="matching.php">マッチング</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <h2>NullTalkへようこそ！</h2>
+    <div id="how_to_use_div_wrapper">
+      <div id="how_to_use_div">
+        <div class="how_to_use">1. <div class="button_sample"><a>趣味の追加</a></div> から趣味を追加しましょう！<br></div>
+        <div class="how_to_use">2. お友達を誘って、<div class="button_sample"><a>マッチング</a></div> を押してください<br></div>
+        <div class="how_to_use">3. 秘密の合言葉を決めて、<input id="form_input_sample" type="text" maxlength="4"> に入力してください<br></div>
+        <div class="how_to_use">4. <div class="button_sample"><a>　ＧＯ！　</a></div> を押してマッチング！<br></div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <span id="footer_text">Copyright&copy; 2019 ぬるんちゅ All Rights Reserved.</span>
+  </div>
 </body>
 
 </html>
