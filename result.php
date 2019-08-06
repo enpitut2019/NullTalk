@@ -36,9 +36,12 @@
         if (isset($password)) {
             $res = pg_query($con, "SELECT uid FROM rooms WHERE password='".$password."'");
             $uid1 = pg_fetch_row($res)[0];
-            print($uid1);
             $uid2 = pg_fetch_row($res)[0];
-            print($uid2);
+
+            $res = pg_query($con, "SELECT hid FROM user_hobbies WHERE uid=".$uid1." 
+                    INTERSECT SELECT hid FROM user_hobbies WHERE uid=".$uid2);
+            print(pg_fetch_row($res)[0]);
+
         }
     ?>
     <ul>
