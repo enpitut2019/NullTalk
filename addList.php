@@ -27,6 +27,23 @@
   <h1>興味のある事柄を選んでください</h1>
   <form action="addListResult.php" method="post">
     <div class="addHobbyList">
+    <?php
+      $url = parse_url(getenv("DATABASE_URL"));
+      $con = pg_connect("host=" . $url['host'] . " port=" 
+        . $url['port'] . " dbname=" . substr($url['path'], 1)
+        . " user=" . $url['user'] . " password=" . $url['pass']);
+
+      $res = pg_query($con, "SELECT hobby_name FROM hobbies");
+      while($hobby_name = pg_fetch_row($res)) {
+        echo '<label><input type="checkbox" name="hobbyAdd[]" value="';
+        echo $hobby_name[0];
+        echo '">';
+        echo $hobby_name[0];
+        echo '</input><br /></label>';
+        
+      }
+    ?>
+      <!--
       <label><input type="checkbox" name="hobbyAdd[]" value="ゴルフ">ゴルフ</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="アニメ">アニメ</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="刀">刀</input><br /></label>
@@ -40,6 +57,7 @@
       <label><input type="checkbox" name="hobbyAdd[]" value="レンズ">レンズ</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="ラーメン">ラーメン</input><br /></label>
       <label><input type="checkbox" name="hobbyAdd[]" value="音MAD">音MAD</input><br /></label>
+    -->
     </div>
     <input class="addButton" type="submit" name="addList" value="追加">
   </form>
