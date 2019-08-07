@@ -79,7 +79,7 @@
     </ul>
   </div>
   <div id="main">
-    <h2>秘密の合言葉を決めて、<input id="form_input_sample" type="text" maxlength="0" /> に入力してください</h2>
+    <h2>秘密の合言葉を入力してください</h2>
     <form action="waiting.php" method="post">
       <div id="form_wrapper">
         <div class="msr_text_04">
