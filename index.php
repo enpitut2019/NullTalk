@@ -75,8 +75,8 @@
     <h2>NullTalkへようこそ！</h2>
     <div id="how_to_use_div_wrapper">
       <div id="how_to_use_div">
-        <div class="how_to_use">1. <div class="button_sample"><a>趣味の追加</a></div> から趣味を追加しましょう！<br></div>
-        <div class="how_to_use">2. お友達を誘って、<div class="button_sample"><a>マッチング</a></div> を押してください<br></div>
+        <div class="how_to_use">1. <div class="button_sample"><a href="addList.php">趣味の追加</a></div> から趣味を追加しましょう！<br></div>
+        <div class="how_to_use">2. お友達を誘って、<div class="button_sample"><a href="matching.php">マッチング</a></div> を押してください<br></div>
         <div class="how_to_use">3. 秘密の合言葉を決めて、<input id="form_input_sample" type="text" maxlength="4"> に入力してください<br></div>
         <div class="how_to_use">4. <div class="button_sample"><a>　ＧＯ！　</a></div> を押してマッチング！<br></div>
       </div>

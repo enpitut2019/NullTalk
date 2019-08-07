@@ -70,7 +70,7 @@
 
 <body>
   <div id="header">
-    <h1>NullTalk</h1>
+    <a id="title" href="index.php">ぬるトーク</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
       <li><a href="myList.php">趣味の閲覧</a></li>
