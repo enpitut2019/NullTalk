@@ -140,3 +140,8 @@ span {
 #footer_text {
 	color: #ffffff;
 }
+
+#title {
+	color: black;
+	font-size: 40px;
+}
