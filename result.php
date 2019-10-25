@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ぬるトーク</title>
+  <title>ぬるカラオケ</title>
   <link rel="stylesheet" type="text/css" href="main.css">
   <style>
     #main {
@@ -15,17 +15,17 @@
 
 <body>
   <div id="header">
-    <a id="title" href="index.php">ぬるトーク</a>
+    <a id="title" href="index.php">ぬるカラオケ</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
-      <li><a href="myList.php">趣味の閲覧</a></li>
-      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="myList.php">曲の閲覧</a></li>
+      <li><a href="addList.php">曲の追加</a></li>
       <li><a href="matching.php">マッチング</a></li>
     </ul>
   </div>
   <div id="main">
   <h1>
-    共通の趣味はこちらです
+    みんなが知っている曲はこちらです
   </h1>
     <?php
       $url = parse_url(getenv("DATABASE_URL"));

@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>NullTalk</title>
+  <title>NullKaraoke</title>
   <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="main.css" rel="stylesheet" type="text/css" />
   <style>
@@ -70,11 +70,11 @@
 
 <body>
   <div id="header">
-    <a id="title" href="index.php">ぬるトーク</a>
+    <a id="title" href="index.php">ぬるカラオケ</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
-      <li><a href="myList.php">趣味の閲覧</a></li>
-      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="myList.php">曲の閲覧</a></li>
+      <li><a href="addList.php">曲の追加</a></li>
       <li><a href="matching.php">マッチング</a></li>
     </ul>
   </div>
