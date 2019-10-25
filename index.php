@@ -19,7 +19,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>ぬるトーク</title>
+  <title>ぬるカラオケ</title>
   <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="main.css" rel="stylesheet" type="text/css" />
   <style>
@@ -64,19 +64,19 @@
 
 <body>
   <div id="header">
-    <a id="title" href="index.php">ぬるトーク</a>
+    <a id="title" href="index.php">ぬるカラオケ</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
-      <li><a href="myList.php">趣味の閲覧</a></li>
-      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="myList.php">曲の閲覧</a></li>
+      <li><a href="addList.php">曲の追加</a></li>
       <li><a href="matching.php">マッチング</a></li>
     </ul>
   </div>
   <div id="main">
-    <h2>ぬるトークへようこそ！</h2>
+    <h2>ぬるカラオケへようこそ！</h2>
     <div id="how_to_use_div_wrapper">
       <div id="how_to_use_div">
-        <div class="how_to_use">1. <div class="button_sample"><a href="addList.php">趣味の追加</a></div> から趣味を追加しましょう！<br></div>
+        <div class="how_to_use">1. <div class="button_sample"><a href="addList.php">曲の追加</a></div> から知っている曲を追加しましょう！<br></div>
         <div class="how_to_use">2. お友達を誘って、<div class="button_sample"><a href="matching.php">マッチング</a></div> を押してください<br></div>
       </div>
     </div>

@@ -15,16 +15,16 @@
 
 <body>
 <div id="header">
-  <a id="title" href="index.php">ぬるトーク</a>
+  <a id="title" href="index.php">ぬるカラオケ</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
-      <li><a href="myList.php">趣味の閲覧</a></li>
-      <li><a href="addList.php">趣味の追加</a></li>
+      <li><a href="myList.php">曲のの閲覧</a></li>
+      <li><a href="addList.php">曲の追加</a></li>
       <li><a href="matching.php">マッチング</a></li>
     </ul>
   </div>
   <div id="main">
-  <h1>興味のある事柄を選んでください</h1>
+  <h1>知っている曲を選んでください</h1>
   <form action="addListResult.php" method="post">
     <div class="addHobbyList">
     <?php
