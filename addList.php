@@ -18,7 +18,7 @@
   <a id="title" href="index.php">ぬるカラオケ</a>
     <ul id="menu">
       <li><a href="index.php">ホーム</a></li>
-      <li><a href="myList.php">曲のの閲覧</a></li>
+      <li><a href="myList.php">曲の閲覧</a></li>
       <li><a href="addList.php">曲の追加</a></li>
       <li><a href="matching.php">マッチング</a></li>
     </ul>
